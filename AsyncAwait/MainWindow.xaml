@@ -12,6 +12,7 @@
         <Button x:Name="button2" Content="5 sek async" HorizontalAlignment="Left" Margin="43,96,0,0" VerticalAlignment="Top" Width="119" Click="button2_Click"/>
         <Button x:Name="button3" Content="Run 3 task" HorizontalAlignment="Left" Margin="43,123,0,0" VerticalAlignment="Top" Width="119" Click="button3_Click"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="127" Margin="204,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141"/>
+        <Button x:Name="button4" Content="Test" HorizontalAlignment="Left" Margin="43,153,0,0" VerticalAlignment="Top" Width="119" Click="button4_Click"/>
 
     </Grid>
 </Window>

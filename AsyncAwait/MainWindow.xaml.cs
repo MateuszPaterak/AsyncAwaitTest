@@ -24,6 +24,9 @@ namespace AsyncAwait
         public MainWindow()
         {
             InitializeComponent();
+            int thread = Thread.CurrentThread.ManagedThreadId;
+            int? task = Task.CurrentId;
+            textBox.Text = $"Start;Th{thread};Ta{task} \n";
         }
 
         //async-await
@@ -35,12 +38,13 @@ namespace AsyncAwait
 
         private async Task<int> TestIntAsync()
         {
-            return await Task.Run(
+            return await Task.Run( 
                 () =>{
                     Thread.Sleep(5000);
                     return 5;
                 });
         }
+        
         //classical, with blocking gui
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -73,7 +77,7 @@ namespace AsyncAwait
                 Thread.Sleep(2000);
                 thread = Thread.CurrentThread.ManagedThreadId;
                 task = Task.CurrentId;
-                textBox.Dispatcher.Invoke(() => { textBox.Text += $"T1;Th{thread};Ta{task} \n"; });
+                textBox.Dispatcher.InvokeAsync(() => { textBox.Text += $"T1;Th{thread};Ta{task} \n"; });
             });
             
             await Task.Run(() =>
@@ -81,7 +85,7 @@ namespace AsyncAwait
                 Thread.Sleep(2000);
                 thread = Thread.CurrentThread.ManagedThreadId;
                 task = Task.CurrentId;
-                textBox.Dispatcher.Invoke(() => { textBox.Text += $"T2;Th{thread};Ta{task} \n"; });
+                textBox.Dispatcher.InvokeAsync(() => { textBox.Text += $"T2;Th{thread};Ta{task} \n"; });
             });
             
             await Task.Run(() =>
@@ -89,9 +93,22 @@ namespace AsyncAwait
                 Thread.Sleep(2000);
                 thread = Thread.CurrentThread.ManagedThreadId;
                 task = Task.CurrentId;
-                textBox.Dispatcher.Invoke(() => { textBox.Text += $"T3;Th{thread};Ta{task} \n"; });
+                textBox.Dispatcher.InvokeAsync(() => { textBox.Text += $"T3;Th{thread};Ta{task} \n"; });
             });
             
+        }
+
+        //
+        private async void button4_Click(object sender, RoutedEventArgs e)
+        {
+            await testAsync();
+        }
+        private async Task testAsync()
+        {
+            textBox.Text = "start\n";
+            int res = await TestIntAsync(); //waiting for end
+            textBox.Text += "before await\n";
+            textBox.Text += res.ToString();
         }
     }
 }
