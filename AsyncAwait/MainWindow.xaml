@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncAwait"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="287.38" Width="479.153">
     <Grid>
         <Button x:Name="button" Content="5 sek async-await" HorizontalAlignment="Left" Margin="43,42,0,0" VerticalAlignment="Top" Width="119" Click="button_Click"/>
-        <Button x:Name="button1" Content="5 sek syn" HorizontalAlignment="Left" Margin="43,69,0,0" VerticalAlignment="Top" Width="119" Click="button1_Click"/>
-        <Button x:Name="button2" Content="5 sek async" HorizontalAlignment="Left" Margin="43,96,0,0" VerticalAlignment="Top" Width="119" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Run 3 task" HorizontalAlignment="Left" Margin="43,123,0,0" VerticalAlignment="Top" Width="119" Click="button3_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="127" Margin="204,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141"/>
-        <Button x:Name="button4" Content="Test" HorizontalAlignment="Left" Margin="43,153,0,0" VerticalAlignment="Top" Width="119" Click="button4_Click"/>
+        <Button x:Name="button1" Content="5s lock" HorizontalAlignment="Left" Margin="43,69,0,0" VerticalAlignment="Top" Width="119" Click="button1_Click"/>
+        <Button x:Name="button2" Content="5s without task" HorizontalAlignment="Left" Margin="43,96,0,0" VerticalAlignment="Top" Width="119" Click="button2_Click"/>
+        <Button x:Name="button3" Content="3 task sync" HorizontalAlignment="Left" Margin="43,123,0,0" VerticalAlignment="Top" Width="119" Click="button3_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="127" Margin="176,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="button4" Content="Test" HorizontalAlignment="Left" Margin="43,177,0,0" VerticalAlignment="Top" Width="119" Click="button4_Click"/>
+        <Button x:Name="button5" Content="3 task async" HorizontalAlignment="Left" Margin="43,150,0,0" VerticalAlignment="Top" Width="119" Click="button5_Click"/>
 
     </Grid>
 </Window>
