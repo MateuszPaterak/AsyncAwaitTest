@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="287.38" Width="479.153">
     <Grid>
-        <Button x:Name="button" Content="5 sek async-await" HorizontalAlignment="Left" Margin="43,42,0,0" VerticalAlignment="Top" Width="119" Click="button_Click"/>
-        <Button x:Name="button1" Content="5s lock" HorizontalAlignment="Left" Margin="43,69,0,0" VerticalAlignment="Top" Width="119" Click="button1_Click"/>
-        <Button x:Name="button2" Content="5s without task" HorizontalAlignment="Left" Margin="43,96,0,0" VerticalAlignment="Top" Width="119" Click="button2_Click"/>
-        <Button x:Name="button3" Content="3 task sync" HorizontalAlignment="Left" Margin="43,123,0,0" VerticalAlignment="Top" Width="119" Click="button3_Click"/>
+        <Button x:Name="button" Content="2x async-await" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top" Width="119" Click="button_Click"/>
+        <Button x:Name="button1" Content="without Task" HorizontalAlignment="Left" Margin="43,39,0,0" VerticalAlignment="Top" Width="119" Click="button1_Click"/>
+        <Button x:Name="button2" Content="blocking when &#xD;&#xA;waiting result" HorizontalAlignment="Left" Margin="43,66,0,0" VerticalAlignment="Top" Width="119" Click="button2_Click" Height="39"/>
+        <Button x:Name="button3" Content="waiting for &#xD;&#xA;each method" HorizontalAlignment="Left" Margin="43,110,0,0" VerticalAlignment="Top" Width="119" Click="button3_Click" Height="38"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="229" Margin="176,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
-        <Button x:Name="button5" Content="Test" HorizontalAlignment="Left" Margin="43,177,0,0" VerticalAlignment="Top" Width="119" Click="button5_Click"/>
-        <Button x:Name="button4" Content="3 task async" HorizontalAlignment="Left" Margin="43,150,0,0" VerticalAlignment="Top" Width="119" Click="button4_Click"/>
+        <Button x:Name="button5" Content=" throw exception &#xD;&#xA;and crash" HorizontalAlignment="Left" Margin="43,180,0,0" VerticalAlignment="Top" Width="119" Click="button5_Click" Height="37"/>
+        <Button x:Name="button4" Content="run all methods" HorizontalAlignment="Left" Margin="43,153,0,0" VerticalAlignment="Top" Width="119" Click="button4_Click"/>
+        <Button x:Name="button6" Content=" throw exception" HorizontalAlignment="Left" Margin="43,222,0,0" VerticalAlignment="Top" Width="119" Click="button6_Click"/>
 
     </Grid>
 </Window>
